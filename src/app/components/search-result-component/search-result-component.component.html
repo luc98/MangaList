@@ -1,0 +1,18 @@
+<h1>Buscando: <small>{{termino}} </small></h1>
+<hr>
+
+<div class="row animated fadeIn fast" *ngIf="mangas.length ===0">
+    <div class="col-md-12">
+        <div class="alert alert-info" role="alert">
+            No se encuentran Resultados con : {{termino}}
+        </div>
+    </div>
+</div>
+
+<div class="card-columns">
+            <!-- *ngFor="let Manga of mangas; let i =index" -->
+            <app-manga-tarjeta [index]="Manga.idx" [Manga]="Manga" *ngFor="let Manga of mangas;"></app-manga-tarjeta>
+
+      
+
+</div>

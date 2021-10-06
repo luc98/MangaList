@@ -1,0 +1,24 @@
+<h1 class="animated fadeIn">{{manga.nombre}} <small>{{manga.aparicion}}</small></h1>
+<hr>
+<div class=" animated fadeIn fast" style="display: flex; ">
+
+    <div class="colmd-md-4" >
+        <img [src]="manga.img" class="img-tomo" [alt]="manga.nombre">
+        <br><br>
+        <a [routerLink]="['/characters']" class="btn btn-outline-primary btn-block">Regresar</a>
+    </div>
+    <div class="colmd-md-8" style="padding-left: 20px;">
+        <h3>{{manga.nombre}}</h3>
+        <hr>
+        <p>
+            {{manga.bio}}
+        </p>
+        <div>
+            <img [hidden]="manga.casa !== 'JUMP'"  class="img-logo" src="assets/img/jump.png" alt="">
+            <img [hidden]="manga.casa !== 'Weekly Shōnen Magazine'" class="img-logo" src="assets/img/magazine.png" alt="">
+            <img [hidden]="manga.casa !== 'Shūkan Shōnen Sunday'" class="img-logo" src="assets/img/Sunday.png" alt="">
+        </div>
+    </div>
+
+
+</div>

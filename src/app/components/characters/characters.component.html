@@ -1,0 +1,12 @@
+<h1>Tomos <small>Manga </small></h1>
+<hr>
+
+
+<div class="card-columns">
+        <!-- *ngFor="let Manga of mangas; let i =index"
+                (mangaSeleccionado)="verManga( $event )"
+        -->
+        <app-manga-tarjeta  [index]="i" [Manga]="Manga" *ngFor="let Manga of mangas; let i =index" ></app-manga-tarjeta> 
+      
+
+</div>
